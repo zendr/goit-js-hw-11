@@ -1,0 +1,157 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+img {
+    display: block;
+    width: 100%;
+    /* height: auto; */
+    height: 300px;
+    object-fit: cover;
+    overflow: hidden;
+    
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 0, 0.459);
+}
+
+.container {
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 95px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+
+.search-form {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background: linear-gradient(0deg, rgba(93, 172, 175, 0.91) 0%, 
+rgba(101, 232, 236, 0.79) 72%);
+}
+
+
+.form-input {
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(108, 178, 235);
+    min-width: 350px;
+    outline: transparent;
+}
+
+button {
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(108, 178, 235);
+    outline: transparent;   
+    cursor: pointer; 
+}
+
+button:hover,
+button:focus {
+    border: 2px solid rgb(53, 16, 214);
+    color: black;
+    background: rgb(148, 230, 225);
+}
+
+.button-submit {
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(108, 178, 235);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.img-link {
+
+}
+
+.photo-card {
+    text-decoration: none;
+    color: black;
+    display: block;
+    height: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: rgb(196, 224, 255);
+}
+
+@media screen and (min-width: 390px) {
+    .photo-card {
+        width: 340px;
+    }
+
+@media screen and (min-width: 725px) {
+    .photo-card {
+        width: calc((100% - 20px * 1) / 2);
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .photo-card {
+    width: calc((100% - 20px * 2) / 3);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .photo-card {
+    width: calc((100% - 20px * 3) / 4);
+    }
+}
+
+.info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    flex-grow: 1;
+    /* padding: 0 10px; */
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    /* padding: 5px; */
+    align-items: center;
+}
+
+b {
+    margin-bottom: 5px;
+}
+
+.load-more {
+    display: block;
+    min-width: 250px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
