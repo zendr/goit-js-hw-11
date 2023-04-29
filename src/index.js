@@ -60,21 +60,26 @@ async function loadImg(searchQuery, pageNumber) {
         makeMarkup(data.hits);
         lightbox.refresh();
       }
-      // if (page > 0) {
-      //   registerIntersectionObserver(); 
-      //   refs.btnLoadMoreEl.classList.add('visually-hidden');
-      // }
+      if (page > 0) {
+      registerIntersectionObserver(); 
+      refs.btnLoadMoreEl.classList.add('visually-hidden');
+      }
       if (page > 1) {
         makeMarkup(data.hits);
         lightbox.refresh();
         smoothScroll();
-      } 
-        if (page >= data.totalHits / data.hits.length ||  data.hits.length === 0) {
+    } 
+    
+   
+      
+    if (page >= data.totalHits / data.hits.length ||  data.hits.length === 0) {
         showMessageEndImages();
         refs.btnLoadMoreEl.classList.add('visually-hidden');
       }
-    // makeMarkup(data.hits);
-    // lightbox.refresh();
+    
+        
+     makeMarkup(data.hits);
+      lightbox.refresh();
   }
     catch (error) {
       console.log(error)
@@ -92,9 +97,6 @@ window.scrollBy({
 });
 }
 
-
-
-//=============
 
 
 
